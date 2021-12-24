@@ -29,6 +29,6 @@ def KadaneAlgo(a):
     return max_sum
 
 t = int(input("Enter no of test cases:"))
-for _ in range(t):
+for _ in range(t):2 5 
     a = list(map(int, input().rstrip().split()))
     print("Maximum contiguous sum is", KadaneAlgo(a))
