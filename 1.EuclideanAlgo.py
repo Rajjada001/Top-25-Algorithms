@@ -4,13 +4,15 @@ The Euclidean algorithm, or Euclid's algorithm, is an efficient method for compu
 '''
 
 def gcd(a,b):
-    if a==0:
-        return b
-    else:
-       return gcd(a%b,a)
-    
+    if b==0:
+        return a
+
+    return gcd(b,a%b)
+def lcm(a,b):
+    return (a*b)//gcd(a,b)
+
 t = int(input("Enter number of test cases"))
 
 for _ in range(t):
     a,b= map(int, input().split())
-    print(gcd(a,b))
+    print(gcd(a,b), lcm(a,b), sep=" ")
