@@ -22,7 +22,7 @@ return max_so_far
 
 def KadaneAlgo(a):
     max_sum = curr_sum = a[0]
-    for i in range(len(a)):
+    for i in range(1,len(a)):
         curr_sum += a[i]
         curr_sum = max(curr_sum, a[i])
         max_sum = max(curr_sum, max_sum)
